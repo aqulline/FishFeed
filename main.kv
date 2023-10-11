@@ -1,0 +1,198 @@
+#:import sm kivy.uix.screenmanager
+ScreenManager:
+    id:manager
+    transition:sm.FadeTransition(duration=.0)
+    MDScreen:
+        name:"home"
+        md_bg_color:"#F5FCEE"
+        MDBottomNavigation:
+            id:bnav
+            panel_color:"#D0EFB1"
+            selected_color_background: "#77A6B6"
+            text_color_active: "#4D7298"
+            MDBottomNavigationItem:
+                name: 'home'
+                text: 'Feeds'
+                icon: 'home'
+                MDBoxLayout:
+                    md_bg_color:"#F5FCEE"
+                    orientation:"vertical"
+                    Labels:
+				        text: "Feeds"
+				        halign: "center"
+				        font_size:sp("23")
+				        pos_hint:{"center_x":.15, "center_y":.94}
+				        height: self.texture_size[1]
+                        width: self.texture_size[1]
+					RecycleView:
+	                    id: feeds
+	                    key_viewclass: 'viewclass'
+	                    key_size: 'height'
+	                    RecycleBoxLayout:
+	                        id:wali
+	                        spacing:dp(-4)
+	                        padding: dp(10)
+	                        default_size: None, dp(350)
+	                        default_size_hint: 1, None
+	                        size_hint_y: None
+	                        height: self.minimum_height
+	                        orientation: 'vertical'
+
+            MDBottomNavigationItem:
+                name: 'shop'
+                text: 'Shop'
+                icon: 'cart'
+                MDBoxLayout:
+                    md_bg_color:"#F5FCEE"
+                    orientation:"vertical"
+                    MDBoxLayout:
+                        adaptive_height:True
+	                    Labels:
+					        text: "Shop"
+					        halign: "left"
+					        font_size:sp("23")
+					        pos_hint:{"center_x":.95, "center_y":.6}
+					        height: self.texture_size[1]
+	                        width: self.texture_size[1]
+				        MDIconButton:
+				            icon:"magnify"
+				            pos_hint:{"center_x":.9, "center_y":.94}
+				            icon_size:dp("30")
+				            theme_text_color:"Custom"
+				            text_color:"#4D7298"
+		            RecycleView:
+	                    id: sellers
+	                    key_viewclass: 'viewclass'
+	                    key_size: 'height'
+	                    RecycleGridLayout:
+	                        id:wali
+	                        spacing:dp(4)
+	                        padding: dp(10)
+	                        cols:2
+	                        default_size: None, dp(200)
+	                        default_size_hint: 1, None
+	                        size_hint_y: None
+	                        height: self.minimum_height
+            MDBottomNavigationItem:
+                name: 'dog'
+                text: 'Notification'
+                icon: 'bell'
+                badge_icon:"numeric-4"
+                MDFloatLayout:
+                    md_bg_color:"#F5FCEE"
+                    MDLabel:
+				        text: "Notification"
+				        halign: "center"
+				        font_size:sp("23")
+				        pos_hint:{"center_x":.2, "center_y":.94}
+            MDBottomNavigationItem:
+                name: 'account'
+                text: 'Account'
+                icon: 'account'
+                MDFloatLayout:
+                    md_bg_color:"#F5FCEE"
+                    MDLabel:
+				        text: "Profile"
+				        halign: "center"
+				        font_size:sp("23")
+				        pos_hint:{"center_x":.15, "center_y":.94}
+
+<Details@MDBoxLayout>:
+    radius:9
+    adaptive_height:True
+    height:dp(400)
+    md_bg_color:"#EAF9DC"
+    pos_hint:{"center_x":.5,"top":.8}
+    orientation:"vertical"
+    description: ""
+    title:""
+    image:""
+    FitImage:
+        source:root.image
+        pos_hint:{"center_x":.5, "center_y":.8}
+        #size:dp(300), dp(300)
+        size_hint:1, 1
+    FloatLayout:
+	    MDLabel:
+	        text:root.title
+	        halign:"left"
+	        font_size:"23sp"
+	        pos_hint:{"center_x":.55, "center_y":.8}
+	    MDLabel:
+	        text:root.description
+	        halign:"left"
+	        font_size:"14sp"
+	        pos_hint:{"center_x":.6, "center_y":.6}
+
+<Retailers@MDCard>:
+    radius:9
+    adaptive_height:True
+    retailer_image:"https://storage.googleapis.com/farmzon-abdcb.appspot.com/Letters/A"
+    retailer_name:"Aqulline"
+    phone:""
+    pos_x: .27
+    pos_y: .64
+    height:dp(65)
+    md_bg_color:214/255, 223/255, 232/255, 1
+    #pos_hint:{"center_x":.5,"top":.8}
+    orientation:"vertical"
+    FloatLayout:
+        AsyncImage:
+            source:root.retailer_image
+            pos_hint:{"center_x":.1, "center_y":.5}
+        MDLabel:
+            text:root.retailer_name
+            halign:"left"
+            pos_hint:{"center_x":.6, "center_y":.65}
+            padding: 100, 0
+            font_size:"15sp"
+        MDLabel:
+            text:root.phone
+            halign:"left"
+            pos_hint:{"center_x":.6, "center_y":.4}
+            padding: 100, 0
+            font_size:"14sp"
+
+<Shops@MDCard>:
+    orientation: "vertical"
+    md_bg_color: "#4D7298"
+    padding: "10dp"
+    #spacing: "5dp"
+    border_radius: 20
+    border_color_a: 0
+    radius: [15]
+    size_hint: None, None
+    size: app.size_x/2, app.size_y/3
+    focus_behavior: False
+    ripple_behavior: True
+    retailer_image:"https://storage.googleapis.com/farmzon-abdcb.appspot.com/Letters/A"
+    retailer_name:"Aqulline"
+    description:""
+    phone:""
+    FitImage:
+        source:root.retailer_image
+        pos_hint:{"center_x":.5, "center_y":.5}
+    MDLabel:
+        text:root.retailer_name
+        halign:"left"
+        font_size:"20sp"
+        pos_hint:{"center_x":.55, "center_y":.5}
+        size_hint_y:None
+        height:self.texture_size[1]
+        width:self.texture_size[1]
+    MDLabel:
+        text:root.description
+        halign:"left"
+        pos_hint:{"center_x":.55, "center_y":.5}
+        size_hint_y:None
+        font_size:"12sp"
+        height:self.texture_size[1]
+        width:self.texture_size[1]
+
+
+<Labels@MDLabel>:
+    text: "Title"
+    theme_text_color: "Custom"
+    text_color: 78/255, 82/255, 84/255, 1
+    size_hint_y: .15
+    height: self.texture_size[1]
