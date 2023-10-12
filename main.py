@@ -26,8 +26,10 @@ class MainApp(MDApp):
     current = StringProperty(screens[len(screens) - 1])
 
     def on_start(self):
-        self.add_feeds()
-        self.add_sellers()
+        #self.add_feeds()
+        #self.add_sellers()
+
+        self.keyboard_hooker()
 
     def keyboard_hooker(self, *args):
         EventLoop.window.bind(on_keyboard=self.hook_keyboard)
@@ -57,7 +59,7 @@ class MainApp(MDApp):
 
     def add_feeds(self):
         data = FB.company_products(FB(), "0715700411")
-
+        #self.root.ids.feeds.data= {}
         for x, y in data.items():
             self.root.ids.feeds.data.append(
                 {
