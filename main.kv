@@ -79,21 +79,8 @@ ScreenManager:
                 MDBoxLayout:
                     md_bg_color:"#F5FCEE"
                     orientation:"vertical"
-                    MDBoxLayout:
-                        adaptive_height:True
-	                    Labels:
-					        text: "Shop"
-					        halign: "left"
-					        font_size:sp("23")
-					        pos_hint:{"center_x":.95, "center_y":.6}
-					        height: self.texture_size[1]
-	                        width: self.texture_size[1]
-				        MDIconButton:
-				            icon:"magnify"
-				            pos_hint:{"center_x":.9, "center_y":.94}
-				            icon_size:dp("30")
-				            theme_text_color:"Custom"
-				            text_color:"#4D7298"
+                    ShopTop:
+                        pos_hint:{"center_x":.5, "center_y":.9}
 		            RecycleView:
 	                    id: sellers
 	                    key_viewclass: 'viewclass'
@@ -125,7 +112,7 @@ ScreenManager:
                 icon: 'account'
                 MDFloatLayout:
                     md_bg_color:"#F5FCEE"
-			        MDIconButton:
+                    MDIconButton:
                         # image-filter-vintage
                         icon:'cog'
                         theme_text_color: "Custom"
@@ -133,6 +120,11 @@ ScreenManager:
                         text_color: 78 / 255, 82 / 255, 84 / 255, 1
                         on_press:
                             app.screen_capture('settings')
+			        AsyncImage:
+	                    source:"https://storage.googleapis.com/farmzon-abdcb.appspot.com/Letters/A"
+	                    pos_hint:{'center_x':.5, 'center_y':.8}
+	                    size_hint: None, None
+	                    size: "300dp", "300dp"
                     MDLabel:
                         text:"Aqulline Mbuya"
                         pos_hint:{'center_x':.5, 'center_y':.95}
@@ -143,13 +135,17 @@ ScreenManager:
                         font_name:'components/fonts/Gill Sans.otf'
                         theme_text_color: "Custom"
                         text_color: 78/255, 82/255, 84/255, 1
-                    MDIcon:
-                        icon:"account"
-                        font_size:"100sp"
-                        pos_hint:{'center_x':.5, 'center_y':.8}
                     MDLabel:
-                        text:"Your, bio will stay here u can change it, in your mind"
-                        pos_hint:{'center_x':.5, 'center_y':.63}
+                        text:"aqeglipambuya@gmail.com"
+                        pos_hint:{'center_x':.5, 'center_y':.65}
+                        halign:'center'
+                        bold:True
+                        font_name:'components/fonts/Gill Sans.otf'
+                        theme_text_color: "Custom"
+                        text_color: 78/255, 82/255, 84/255, 1
+                    MDLabel:
+                        text:"0788204327"
+                        pos_hint:{'center_x':.5, 'center_y':.6}
                         halign:'center'
                         bold:True
                         font_name:'components/fonts/Gill Sans.otf'
@@ -194,6 +190,81 @@ ScreenManager:
             MDLabel:
                 text:"NEWS"
                 halign:"center"
+
+    MDScreen:
+        name:'compan'
+        MDFloatLayout:
+            md_bg_color:"#F5FCEE"
+            MDIconButton:
+                icon:'chevron-left'
+                theme_text_color: "Custom"
+                pos_hint:{'center_x':.1, 'center_y':.95}
+                text_color: 83 / 255, 186 / 255, 155 / 255, 1
+                on_press:
+                    app.screen_leave()
+            MDLabel:
+                text:app.company_name
+                pos_hint:{'center_x':.5, 'center_y':.95}
+                halign:'center'
+                font_style:'H6'
+                bold:True
+                underline: True
+                font_name:'components/fonts/Gill Sans.otf'
+                theme_text_color: "Custom"
+                text_color: 78/255, 82/255, 84/255, 1
+            AsyncImage:
+                source:app.company_logo
+                pos_hint:{'center_x':.5, 'center_y':.85}
+                size_hint: None, None
+                size: "200dp", "200dp"
+            MDLabel:
+                text:app.company_followers
+                pos_hint:{'center_x':.5, 'center_y':.75}
+                halign:'center'
+                bold:True
+                font_name:'components/fonts/Gill Sans.otf'
+                theme_text_color: "Custom"
+                text_color: 78/255, 82/255, 84/255, 1
+            MDLabel:
+                text:'Loyalties'
+                pos_hint:{'center_x':.5, 'center_y':.73}
+                halign:'center'
+                bold:True
+                font_name:'components/fonts/Gill Sans.otf'
+                theme_text_color: "Custom"
+                text_color: 78/255, 82/255, 84/255, 1
+
+            MDLabel:
+                text:app.company_bio
+                pos_hint:{'center_x':.5, 'center_y':.58}
+                halign:'center'
+                font_size: "18sp"
+                bold:True
+                font_name:'components/fonts/Gill Sans.otf'
+                theme_text_color: "Custom"
+                text_color: 78/255, 82/255, 84/255, 1
+            MDSeparator:
+                height: "4dp"
+                pos_hint:{'center_x': .5, 'center_y': .48}
+            MDLabel:
+                text:"Products"
+                pos_hint:{'center_x':.5, 'center_y':.51}
+                halign:'center'
+                font_style:'Subtitle1'
+                bold:True
+                font_name:'components/fonts/Gill Sans.otf'
+                theme_text_color: "Custom"
+                text_color: 78/255, 82/255, 84/255, 1
+            ScrollView:
+                size_hint_y: .5
+                pos_hint:{'center_x':.5, 'center_y':.23}
+                id:company_scroll
+                MDGridLayout:
+                    cols: 2
+                    adaptive_height: True
+                    padding: dp(10), dp(4)
+                    spacing: dp(30)
+                    id:cproducts
     MDScreen:
         name:'settings'
         FloatLayout:
@@ -231,6 +302,23 @@ ScreenManager:
                     app.on_start()
                 IconLeftWidget:
                     icon: "logout"
+
+<ShopTop@MDBoxLayout>:
+	adaptive_height:True
+	FloatLayout:
+	    Labels:
+	        text: "Shop"
+	        halign: "center"
+	        font_size:sp("23")
+	        pos_hint:{"center_x":.1, "center_y":.6}
+	        height: self.texture_size[1]
+	        width: self.texture_size[1]
+	    MDIconButton:
+	        icon:"magnify"
+	        pos_hint:{"center_x":.9, "center_y":.6}
+	        icon_size:dp("30")
+	        theme_text_color:"Custom"
+	        text_color:"#4D7298"
 
 <Details@MDBoxLayout>:
     radius:9
@@ -320,6 +408,8 @@ ScreenManager:
     retailer_name:"Aqulline"
     description:""
     phone:""
+    on_release:
+        app.get_specific(root.phone)
     FitImage:
         source:root.retailer_image
         pos_hint:{"center_x":.5, "center_y":.5}

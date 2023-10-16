@@ -1,0 +1,323 @@
+{
+   "data": [
+      {
+         "0628834063": {
+            "Orders": {
+               "Pendo karanga": {
+                  "20220326154605769014": {
+                     "Phone number": "0788204327",
+                     "amount": "600",
+                     "company_phone": "0628834063",
+                     "date": "2022-03-26",
+                     "location": "vimbweta vya girls hostel",
+                     "oder_id": "20220326154605769014",
+                     "product name": "Pendo karanga",
+                     "quantity": "2",
+                     "time": "15:46:05.768981"
+                  },
+                  "20220525133513673842": {
+                     "Phone number": "",
+                     "amount": "600",
+                     "company_phone": "0628834063",
+                     "date": "2022-05-25",
+                     "location": "vimbweta vya girls hostel",
+                     "oder_id": "20220525133513673842",
+                     "product name": "Pendo karanga",
+                     "quantity": "2",
+                     "time": "13:35:13.673701"
+                  }
+               }
+            },
+            "bio": "Ni mmi pendo karanga",
+            "customer_name": "Pendo",
+            "customer_password": "9070",
+            "customer_phone": "0628834063",
+            "followers": "4",
+            "following": "23",
+            "logo": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/Logos/0628834063/Pendo52274091007112302202",
+            "loyalties": {
+               "0676133153": {
+                  "user_name": "zanially",
+                  "user_number": "0676133153"
+               },
+               "0758758440": {
+                  "user_name": "jophex",
+                  "user_number": "0758758440"
+               },
+               "0767290476": {
+                  "user_name": "waridi",
+                  "user_number": "0767290476"
+               },
+               "0788204327": {
+                  "user_name": "beast",
+                  "user_number": "0788204327"
+               }
+            },
+            "other_number": "0758758440",
+            "products": {
+               "10723311007112302202": {
+                  "image_url": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/products/customer/Pendo%20karanga81490811007112302202",
+                  "product_description": "Karanga kutoka kwa pendo karanga tamu za mayayi",
+                  "product_name": "Pendo karanga",
+                  "product_price": "300"
+               }
+            },
+            "statistics": {
+               "2022-03-26": {
+                  "Pendo karanga": {
+                     "orders": "1"
+                  }
+               },
+               "2022-05-25": {
+                  "Pendo karanga": {
+                     "orders": "1"
+                  }
+               }
+            }
+         },
+         "0676133153": {
+            "Orders": {
+               "Juice embe": {
+                  "20220321175016430666": {
+                     "Phone number": "0788204327",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-03-21",
+                     "location": "vimbweta nyuma ya ndege",
+                     "oder_id": "20220321175016430666",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "17:50:16.430533"
+                  },
+                  "20220408140930832719": {
+                     "Phone number": "0784449385",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-04-08",
+                     "location": "Block 2",
+                     "oder_id": "20220408140930832719",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "14:09:30.832599"
+                  },
+                  "20220525133756052093": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-25",
+                     "location": "Aviation classes",
+                     "oder_id": "20220525133756052093",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "13:37:56.052010"
+                  },
+                  "20220525133806163049": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-25",
+                     "location": "Aviation classes",
+                     "oder_id": "20220525133806163049",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "13:38:06.162968"
+                  },
+                  "20220525133918651940": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-25",
+                     "location": "Aviation classes",
+                     "oder_id": "20220525133918651940",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "13:39:18.651840"
+                  },
+                  "20220525133928434225": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-25",
+                     "location": "Aviation classes",
+                     "oder_id": "20220525133928434225",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "13:39:28.434164"
+                  },
+                  "20220525133937789608": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-25",
+                     "location": "Aviation classes",
+                     "oder_id": "20220525133937789608",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "13:39:37.789504"
+                  },
+                  "20220526211516061890": {
+                     "Phone number": "",
+                     "amount": "600",
+                     "company_phone": "0676133153",
+                     "date": "2022-05-26",
+                     "location": "Block 18",
+                     "oder_id": "20220526211516061890",
+                     "product name": "Juice embe",
+                     "quantity": "2",
+                     "time": "21:15:16.061716"
+                  }
+               }
+            },
+            "bio": "Best juice seller in university",
+            "customer_name": "Zanially",
+            "customer_password": "9090",
+            "customer_phone": "0676133153",
+            "followers": "7",
+            "following": "13",
+            "logo": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/Logos/0676133153/Zanially58679794607112302202",
+            "loyalties": {
+               "0628566652": {
+                  "user_name": "rychard",
+                  "user_number": "0628566652"
+               },
+               "0788204327": {
+                  "user_name": "beast",
+                  "user_number": "0788204327"
+               }
+            },
+            "other_number": "0758758440",
+            "products": {
+               "67793883607112302202": {
+                  "image_url": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/products/customer/Juice%20embe85860293607112302202",
+                  "product_description": "Pata juice tamu za maembe!",
+                  "product_name": "Juice embe",
+                  "product_price": "300"
+               }
+            },
+            "statistics": {
+               "2022-03-21": {
+                  "Juice embe": {
+                     "orders": "1"
+                  }
+               },
+               "2022-04-08": {
+                  "Juice embe": {
+                     "orders": "1"
+                  }
+               },
+               "2022-05-25": {
+                  "Juice embe": {
+                     "orders": "5"
+                  }
+               },
+               "2022-05-26": {
+                  "Juice embe": {
+                     "orders": "1"
+                  }
+               }
+            }
+         },
+         "0715700411": {
+            "Orders": {
+               "Saa kali": {
+                  "20220326154951988298": {
+                     "Phone number": "0788204327",
+                     "amount": "300",
+                     "company_phone": "0715700411",
+                     "date": "2022-03-26",
+                     "location": "vimbweta vya girls hostel",
+                     "oder_id": "20220326154951988298",
+                     "product name": "Saa kali",
+                     "quantity": "1",
+                     "time": "15:49:51.988260"
+                  },
+                  "20220330091513843727": {
+                     "Phone number": "0788204327",
+                     "amount": "600",
+                     "company_phone": "0715700411",
+                     "date": "2022-03-30",
+                     "location": "vimbweta vya boys hostel",
+                     "oder_id": "20220330091513843727",
+                     "product name": "Saa kali",
+                     "quantity": "2",
+                     "time": "09:15:13.843610"
+                  },
+                  "20220330091916662230": {
+                     "Phone number": "0788204327",
+                     "amount": "300",
+                     "company_phone": "0715700411",
+                     "date": "2022-03-30",
+                     "location": "vimbweta vya block 16",
+                     "oder_id": "20220330091916662230",
+                     "product name": "Saa kali",
+                     "quantity": "1",
+                     "time": "09:19:16.662182"
+                  },
+                  "20220330142920149757": {
+                     "Phone number": "0788204327",
+                     "amount": "600",
+                     "company_phone": "0715700411",
+                     "date": "2022-03-30",
+                     "location": "vimbweta vya girls hostel",
+                     "oder_id": "20220330142920149757",
+                     "product name": "Saa kali",
+                     "quantity": "2",
+                     "time": "14:29:20.149621"
+                  },
+                  "20230719161912779097": {
+                     "Phone number": "0628566652",
+                     "amount": "600",
+                     "company_phone": "0715700411",
+                     "date": "2023-07-19",
+                     "location": "Choose location",
+                     "oder_id": "20230719161912779097",
+                     "product name": "Saa kali",
+                     "quantity": "2",
+                     "time": "16:19:12.779016"
+                  }
+               }
+            },
+            "bio": "Nauza saa mbalimbali za kijanja",
+            "customer_name": "Aqulline",
+            "customer_password": "9060",
+            "customer_phone": "0715700411",
+            "followers": "5",
+            "following": "0",
+            "logo": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/Logos/0715700411/Aqulline03182002517112302202",
+            "loyalties": {
+               "0788204327": {
+                  "user_name": "beast",
+                  "user_number": "0788204327"
+               }
+            },
+            "other_number": "0758758440",
+            "products": {
+               "31786990517112302202": {
+                  "image_url": "https://storage.googleapis.com/farmzon-abdcb.appspot.com/products/customer/Saa%20kali50361301517112302202",
+                  "product_description": "Pata saa kali za ki gentelman!",
+                  "product_name": "Saa kali",
+                  "product_price": "300"
+               }
+            },
+            "statistics": {
+               "2022-03-26": {
+                  "Saa kali": {
+                     "orders": "1"
+                  }
+               },
+               "2022-03-30": {
+                  "Saa kali": {
+                     "orders": "3"
+                  }
+               },
+               "2023-07-19": {
+                  "Saa kali": {
+                     "orders": "1"
+                  }
+               }
+            }
+         },
+         "id": 173218026431090860
+      }
+   ]
+}

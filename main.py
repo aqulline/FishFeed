@@ -1,12 +1,15 @@
 from kivy.base import EventLoop
-from kivy.properties import NumericProperty, StringProperty
+from kivy.properties import NumericProperty, StringProperty, DictProperty
 from kivymd.app import MDApp
 from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy import utils
 from kivymd.toast import toast
+import ssl
 
 from database import FireBase as FB
+
+ssl._create_default_https_context = ssl._create_unverified_context
 
 Window.keyboard_anim_args = {"d": .2, "t": "linear"}
 Window.softinput_mode = "below_target"
@@ -26,8 +29,8 @@ class MainApp(MDApp):
     current = StringProperty(screens[len(screens) - 1])
 
     def on_start(self):
-        #self.add_feeds()
-        #self.add_sellers()
+        # self.add_feeds()
+        self.add_sellers()
 
         self.keyboard_hooker()
 
@@ -49,8 +52,6 @@ class MainApp(MDApp):
             toast('Press Home button!')
             return True
 
-
-
     """
     
             FEEDS FUNCTION
@@ -59,7 +60,7 @@ class MainApp(MDApp):
 
     def add_feeds(self):
         data = FB.company_products(FB(), "0715700411")
-        #self.root.ids.feeds.data= {}
+        self.root.ids.feeds.data= {}
         for x, y in data.items():
             self.root.ids.feeds.data.append(
                 {
@@ -79,46 +80,42 @@ class MainApp(MDApp):
 
                SHOP FUNCTION
 
-       """
+   """
+
+    seller_data = DictProperty({})
+    company_name = StringProperty("")
+    company_logo = StringProperty('')
+    company_followers = StringProperty("")
+    company_bio = StringProperty("")
+
 
     def add_sellers(self):
-        data = FB.get_sellers(FB())
+        self.seller_data = FB.get_sellers(FB())
 
-        for x, y in data.items():
+        for x, y in self.seller_data.items():
             self.root.ids.sellers.data.append(
                 {
                     "viewclass": "Shops",
-                    "retailer_name": y["name"],
-                    "retailer_image": f"https://storage.googleapis.com/farmzon-abdcb.appspot.com/Letters/{y['name'][0].capitalize()}",
-                    "description":y["email"],
+                    "retailer_name": y["customer_name"],
+                    "retailer_image": y["logo"],
+                    "description": y["bio"],
                     "phone": x,
                     "id": x
                 }
             )
 
+    def get_specific(self, phone):
+        print("get specific")
+        self.company_name = self.seller_data[phone]["customer_name"]
+        self.company_logo = self.seller_data[phone]["logo"]
+        self.company_followers = self.seller_data[phone]["followers"]
+        self.company_bio = self.seller_data[phone]["bio"]
+        self.screen_capture("compan")
+
     """
             END SHOP FUNCTION
 
     """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     def screen_capture(self, screen):
         sm = self.root

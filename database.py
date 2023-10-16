@@ -22,11 +22,11 @@ class FireBase:
             try:
                 cred = credentials.Certificate("credential/farmzon-abdcb-c4c57249e43b.json")
                 initialize_app(cred, {'databaseURL': 'https://farmzon-abdcb.firebaseio.com/'})
-                store = db.reference("Users")
+                store = db.reference("Shoppy").child("Company")
                 stores = store.get()
                 print(stores)
                 return stores
             except:
                 return "No Internet!"
 
-#FireBase.get_sellers(FireBase())
+
