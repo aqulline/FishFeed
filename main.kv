@@ -217,6 +217,12 @@ ScreenManager:
                 pos_hint:{'center_x':.5, 'center_y':.85}
                 size_hint: None, None
                 size: "200dp", "200dp"
+            MDFillRoundFlatButton:
+			    text: "Follow"
+			    md_bg_color: "#4D7298"
+			    size_hint:.3, None
+			    elevation: 3
+			    pos_hint:{"center_x":.5, "center_y":.65}
             MDLabel:
                 text:app.company_followers
                 pos_hint:{'center_x':.5, 'center_y':.75}
@@ -320,16 +326,13 @@ ScreenManager:
 	        theme_text_color:"Custom"
 	        text_color:"#4D7298"
 
-<Details@MDBoxLayout>:
+<Details>:
     radius:9
     adaptive_height:True
     height:dp(400)
     md_bg_color:"#E0D97B"
     pos_hint:{"center_x":.5,"top":.8}
     orientation:"vertical"
-    description: ""
-    title:""
-    image:""
     FitImage:
         source:root.image
         pos_hint:{"center_x":.5, "center_y":.8}
@@ -356,9 +359,8 @@ ScreenManager:
     phone:""
     pos_x: .27
     pos_y: .64
-    size:app.size_x/2.5, app.size_y
+    size:app.size_x/2.5, app.size_y/5
     size_hint:None, None
-    height:dp(app.size_y/5)
     md_bg_color:214/255, 223/255, 232/255, 1
     #pos_hint:{"center_x":.5,"top":.8}
     orientation:"vertical"
@@ -392,7 +394,7 @@ ScreenManager:
             padding: 100, 0
             font_size:"14sp"
 
-<Shops@MDCard>:
+<Shops>:
     orientation: "vertical"
     md_bg_color: "#4D7298"
     padding: "10dp"
@@ -404,10 +406,6 @@ ScreenManager:
     size: app.size_x/2, app.size_y/3
     focus_behavior: False
     ripple_behavior: True
-    retailer_image:"https://storage.googleapis.com/farmzon-abdcb.appspot.com/Letters/A"
-    retailer_name:"Aqulline"
-    description:""
-    phone:""
     on_release:
         app.get_specific(root.phone)
     FitImage:
@@ -415,7 +413,7 @@ ScreenManager:
         pos_hint:{"center_x":.5, "center_y":.5}
     MDLabel:
         text:root.retailer_name
-        halign:"left"
+        halign:"center"
         font_size:"20sp"
         pos_hint:{"center_x":.55, "center_y":.5}
         size_hint_y:None

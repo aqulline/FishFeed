@@ -7,6 +7,9 @@ from kivy import utils
 from kivymd.toast import toast
 import ssl
 
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.card import MDCard
+
 from database import FireBase as FB
 
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -17,6 +20,18 @@ Clock.max_iteration = 250
 
 if utils.platform != 'android':
     Window.size = (412, 732)
+
+
+class Details(MDBoxLayout):
+    title = StringProperty("")
+    image = StringProperty("")
+    description = StringProperty("")
+
+
+class Shops(MDCard):
+    retailer_image = StringProperty("")
+    retailer_name = StringProperty("")
+    description = StringProperty("")
 
 
 class MainApp(MDApp):
@@ -60,7 +75,7 @@ class MainApp(MDApp):
 
     def add_feeds(self):
         data = FB.company_products(FB(), "0715700411")
-        self.root.ids.feeds.data= {}
+        self.root.ids.feeds.data = {}
         for x, y in data.items():
             self.root.ids.feeds.data.append(
                 {
@@ -79,7 +94,6 @@ class MainApp(MDApp):
     """
 
                SHOP FUNCTION
-
    """
 
     seller_data = DictProperty({})
@@ -87,7 +101,6 @@ class MainApp(MDApp):
     company_logo = StringProperty('')
     company_followers = StringProperty("")
     company_bio = StringProperty("")
-
 
     def add_sellers(self):
         self.seller_data = FB.get_sellers(FB())
